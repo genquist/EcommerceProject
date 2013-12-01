@@ -3,7 +3,11 @@
 		<div class="thumbnail">
 			<div class="caption">
 				<% if product.image_filename %>
-				<p><%= image_tag product.image_filename, :width => '150' %></p>
+					<%= image_tag product.image_filename, :width => '150', :height => '105' %>
+					<% else %>
+					<div class="nopicture">
+						<p class="text-center">No Image</p>
+					</div>
 				<% end %>
 				<h4><%= link_to product.name, store_product_path(product) %></h4>
 				<p><%= product.description %></p>

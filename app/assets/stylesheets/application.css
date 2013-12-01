@@ -55,3 +55,16 @@ header{
 .nav > li > a:hover{
 	color: blue;
 }
+
+.caption img{
+	float: left;
+	margin-right: 20px;
+}
+
+.nopicture{
+	width: 150px;
+	background-color: grey;
+	height: 105px;
+	float: left;
+	margin-right: 20px;
+}
