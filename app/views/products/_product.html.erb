@@ -1,11 +1,13 @@
-<div class="span4">
-	<div class="thumbnail">
-		<div class="caption">
-			<h4><%= link_to product.name, store_product_path(product) %></h4>
-			<p><%= product.description %></p>
-			<p class="price">
-				<%= number_to_currency product.price %>
-			</p>
+<div class="row">
+	<div class="span12">
+		<div class="thumbnail">
+			<div class="caption">
+				<h4><%= link_to product.name, store_product_path(product) %></h4>
+				<p><%= product.description %></p>
+				<p class="price">
+					<%= number_to_currency product.price %>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
