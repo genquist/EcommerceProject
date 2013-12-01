@@ -7,9 +7,9 @@
 			<li class="divider-vertical"></li>
 			<li><%= link_to 'Contact Us', root_path %></li>
 		</ul>
-		<form action="" class="navbar-search pull-left">
-			<input type="text" placeholder="Search…" class="search-query">
-		</form>
+		<%= form_tag(search_results_path, :class => 'navbar-search pull-left') do %>
+			<%= text_field_tag :keywords, nil, :class => 'search-query', :placeholder => 'Search'%>
+		<% end %>
 		<ul class="nav pull-right">
 			<li><%= link_to 'Admin', root_path + "admin" %></li>
 		</ul>

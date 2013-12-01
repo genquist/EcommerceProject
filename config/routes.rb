@@ -4,6 +4,8 @@ EcommerceProject::Application.routes.draw do
 
   match 'store/:id' => 'store#show', :as => :store_product, :via => :get  
 
+  match 'search_results' => 'store#search_results', :as => :search_results, :via => :post
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

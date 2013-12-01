@@ -6,4 +6,8 @@ class StoreController < ApplicationController
   def show
   	@product = Product.find(params[:id])
   end
+
+  def search_results
+  	@products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+  end
 end
