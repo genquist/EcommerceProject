@@ -1,0 +1,17 @@
+<nav class="navbar navbar-static">
+	<div class="navbar-inner">
+		<ul class="nav nav-pills">
+			<li><%= link_to 'Home', root_path %></li>
+			<li class="divider-vertical"></li>
+			<li><%= link_to 'About', root_path %></li>
+			<li class="divider-vertical"></li>
+			<li><%= link_to 'Contact Us', root_path %></li>
+		</ul>
+		<form action="" class="navbar-search pull-left">
+			<input type="text" placeholder="Search…" class="search-query">
+		</form>
+		<ul class="nav pull-right">
+			<li><%= link_to 'Admin', root_path + "admin" %></li>
+		</ul>
+	</div>
+</nav>
