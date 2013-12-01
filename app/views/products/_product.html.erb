@@ -2,6 +2,9 @@
 	<div class="span12">
 		<div class="thumbnail">
 			<div class="caption">
+				<% if product.image_filename %>
+				<p><%= image_tag product.image_filename, :width => '150' %></p>
+				<% end %>
 				<h4><%= link_to product.name, store_product_path(product) %></h4>
 				<p><%= product.description %></p>
 				<p class="price">
