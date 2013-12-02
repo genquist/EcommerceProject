@@ -30,9 +30,9 @@ class StoreController < ApplicationController
   	redirect_to :action => :index
   end
 
-  def clear_products
+  def clear_cart
   	session[:cart] = nil
-  	redirect_to :action => :indexs
+  	redirect_to :action => :index
   end
 
 protected
