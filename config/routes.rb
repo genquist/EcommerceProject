@@ -9,6 +9,8 @@ EcommerceProject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  match 'store/:id/add_product' => 'store#add_product', :as => :add_product, :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

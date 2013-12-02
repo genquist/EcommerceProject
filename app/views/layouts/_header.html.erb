@@ -4,6 +4,14 @@
 		<h2>Xtreme Pie</h2>
 	</div>
 	<div id="shoppingcart">
-
+		<% if session[:cart].empty? %>
+			<p>You have no products in your cart</p>
+			<% else %>
+				<% @cart.each do |product| %>
+					<p>
+						<%= product.name %>
+					</p>
+				<% end %>
+		<% end %>
 	</div>
 </header>
