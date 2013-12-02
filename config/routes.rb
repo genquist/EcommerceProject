@@ -11,6 +11,10 @@ EcommerceProject::Application.routes.draw do
 
   match 'store/:id/add_product' => 'store#add_product', :as => :add_product, :via => :get
 
+  match 'about' => 'page#about', :as => :about
+
+  match 'contact_us' => 'page#contact_us', :as => :contact_us
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

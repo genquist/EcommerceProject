@@ -35,8 +35,12 @@ header{
 	height: 100px;
 }
 
-#logo, #shoppingcart{
+#logo{
 	float: left;
+}
+
+#shoppingcart{
+	float: right;
 }
 
 #logo{

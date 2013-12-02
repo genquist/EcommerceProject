@@ -9,12 +9,12 @@
 						<p class="text-center">No Image</p>
 					</div>
 				<% end %>
+				<%= link_to 'Add to Cart',  add_product_path(product), :class => 'pull-right' %>
 				<h4><%= link_to product.name, store_product_path(product) %></h4>
 				<p><%= product.description %></p>
 				<p class="price">
 					<%= number_to_currency product.price %>
 				</p>
-				<%= link_to 'Add to Cart',  add_product_path(product) %>
 			</div>
 		</div>
 	</div>

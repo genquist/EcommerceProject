@@ -3,9 +3,9 @@
 		<ul class="nav nav-pills">
 			<li><%= link_to 'Home', root_path %></li>
 			<li class="divider-vertical"></li>
-			<li><%= link_to 'About', root_path %></li>
+			<li><%= link_to 'About', about_path %></li>
 			<li class="divider-vertical"></li>
-			<li><%= link_to 'Contact Us', root_path %></li>
+			<li><%= link_to 'Contact Us', contact_us_path %></li>
 		</ul>
 		<%= form_tag(search_results_path, :class => 'navbar-search pull-left') do %>
 			<%= text_field_tag :keywords, nil, :class => 'search-query', :placeholder => 'Search'%>

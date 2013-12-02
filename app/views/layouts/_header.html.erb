@@ -4,6 +4,7 @@
 		<h2>Xtreme Pie</h2>
 	</div>
 	<div id="shoppingcart">
+		<div class="thumbnail">
 		<% if session[:cart].empty? %>
 			<p>You have no products in your cart</p>
 			<% else %>
@@ -13,5 +14,6 @@
 					</p>
 				<% end %>
 		<% end %>
+		</div>
 	</div>
 </header>
