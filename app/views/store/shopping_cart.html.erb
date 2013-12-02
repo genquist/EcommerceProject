@@ -11,7 +11,7 @@
 					<% else %>
 					<% @cart.each do |product| %>
 						<p>
-						<%= product.name %> - <%= number_to_currency product.price %> <button class="btn"><i class=" icon-remove"></i> <%= link_to "Remove", root_path %></button>
+						<%= product.name %> - <%= number_to_currency product.price %> <button class="btn"><i class=" icon-remove"></i> <%= link_to "Remove", remove_product_path(product) %></button>
 						</p>
 					<% end %>
 				<p><strong>Total: <%= number_to_currency @total %></strong></p>

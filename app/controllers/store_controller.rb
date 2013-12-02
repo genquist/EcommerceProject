@@ -35,16 +35,4 @@ class StoreController < ApplicationController
   	redirect_to :action => :index
   end
 
-protected
-	def initialize_cart
-		session[:cart] ||= []
-    @total = 0
-		@cart = []
-		session[:cart].each {|id| @cart << Product.find(id)}
-
-    @cart.each do |item|
-      @total += item.price
-    end
-	end
-
 end

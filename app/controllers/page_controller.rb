@@ -1,9 +1,11 @@
 class PageController < ApplicationController
+	before_filter :initialize_cart
+	
 	def about
-		@page = Pages.first
+		@page = Page.first
 	end
 
 	def contact_us
-		@page = Pages.last
+		@page = Page.last
 	end
 end

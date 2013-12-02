@@ -19,6 +19,8 @@ EcommerceProject::Application.routes.draw do
 
   match 'clear_cart' => 'store#clear_cart', :as => :clear_cart
 
+  match 'remove/:id' => 'store#remove_product', :as => :remove_product, :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
