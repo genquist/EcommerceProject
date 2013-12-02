@@ -2,7 +2,7 @@ class StoreController < ApplicationController
 	before_filter :initialize_cart
 
   def index
-  	@products = Product.order(:name).page(params[:page]).per(3)
+  	@products = Product.order(:name).page(params[:page]).per(5)
   end
 
   def show
@@ -13,10 +13,14 @@ class StoreController < ApplicationController
   	@products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
   end
 
+  def shopping_cart
+    @disable_cart = true
+  end
+
   def add_product
   	id = params[:id].to_i
   	session[:cart] ||= []
-  	session[:cart] << id unless session[:cart].include?(id)
+  	session[:cart] << id 
   	redirect_to :action => :index
   end
 
@@ -34,8 +38,13 @@ class StoreController < ApplicationController
 protected
 	def initialize_cart
 		session[:cart] ||= []
+    @total = 0
 		@cart = []
 		session[:cart].each {|id| @cart << Product.find(id)}
+
+    @cart.each do |item|
+      @total += item.price
+    end
 	end
 
 end

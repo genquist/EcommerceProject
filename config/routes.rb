@@ -15,6 +15,8 @@ EcommerceProject::Application.routes.draw do
 
   match 'contact_us' => 'page#contact_us', :as => :contact_us
 
+  match 'cart' => 'store#shopping_cart', :as => :shopping_cart
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

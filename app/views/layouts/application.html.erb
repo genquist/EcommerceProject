@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+<%= render 'layouts/shopping_cart' unless @disable_cart %>
 <div  class="container">
 	<%= render 'layouts/header' %>
 	<%= render 'layouts/nav' %>

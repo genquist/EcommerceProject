@@ -40,7 +40,10 @@ header{
 }
 
 #shoppingcart{
-	float: right;
+	position:fixed;
+    right:20px;
+    width: 170px;
+    top: 100px;
 }
 
 #logo{
@@ -71,4 +74,12 @@ header{
 	height: 105px;
 	float: left;
 	margin-right: 20px;
+}
+
+.thumbnail{
+	background-color: white;
+}
+
+.btn a:hover{
+	text-decoration: none;
 }
