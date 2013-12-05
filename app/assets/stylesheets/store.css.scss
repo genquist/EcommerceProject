@@ -1,3 +1,71 @@
 // Place all the styles related to the store controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$fivepx: 5px;
+
+ html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+background: -moz-linear-gradient(top,  rgba(193,193,193,0.65) 0%, rgba(149,149,149,0) 23%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(193,193,193,0.65)), color-stop(23%,rgba(149,149,149,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(193,193,193,0.65) 0%,rgba(149,149,149,0) 23%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(193,193,193,0.65) 0%,rgba(149,149,149,0) 23%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(193,193,193,0.65) 0%,rgba(149,149,149,0) 23%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(193,193,193,0.65) 0%,rgba(149,149,149,0) 23%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c1c1c1', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+background-repeat: repeat-x;
+}
+
+header{
+	height: 100px;
+}
+
+#shoppingcart{
+	position:fixed;
+    right:20px;
+    width: 170px;
+    top: 100px;
+}
+
+#logo{
+	padding: $fivepx;
+	width: 300px;
+
+	img{
+		float: left
+	}
+}
+
+.row{
+	margin-bottom: $fivepx;
+}
+
+.nav > li > a:hover{
+	color: blue;
+}
+
+.caption img{
+	float: left;
+	margin-right: 20px;
+}
+
+.nopicture{
+	width: 150px;
+	background-color: #C9C9C9;
+	height: 105px;
+	float: left;
+	margin-right: 20px;
+}
+
+.thumbnail{
+	background-color: white;
+}
+
+.btn a:hover{
+	text-decoration: none;
+}

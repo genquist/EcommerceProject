@@ -10,7 +10,7 @@ class StoreController < ApplicationController
   end
 
   def search_results
-  	@products = Product.where("name LIKE ?", "%#{params[:keywords]}%")
+  	@products = Product.joins(:catagory).where("products.name LIKE ? or catagories.name LIKE ?", "%#{params[:keywords]}%", "%#{params[:keywords]}%")
   end
 
   def shopping_cart
@@ -35,4 +35,23 @@ class StoreController < ApplicationController
   	redirect_to :action => :index
   end
 
+  def order
+    @disable_cart = true
+    @province = Province.all
+  end
+
+  def create_order
+    newcust = Customer.new
+    newcust.first_name = params[:first_name]
+    newcust.last_name = params[:last_name]
+    newcust.address = params[:address]
+    newcust.city = params[:city]
+    newcust.postal_code = params[:postal_code]
+    newcust.email = params[:email]
+    newcust.province_id = params[:province]
+    newcust.save
+
+    redirect_to :action => :order
+    #redirect_to :action => :index
+  end
 end

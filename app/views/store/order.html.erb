@@ -1,0 +1,30 @@
+<div class="page-header">
+	<h3>Customer Details</h3>
+</div>
+<%= debug(params) %>
+<div class="row">
+	<div class="span12">
+		<div class="thumbnail">
+			<div class="caption">
+				<%= form_tag("/newcust", method: "post") do %>
+					<%= label_tag(:first_name, "First Name:") %>
+ 					<%= text_field_tag(:first_name) %>
+ 					<%= label_tag(:last_name, "Last Name:") %>
+ 					<%= text_field_tag(:last_name) %>
+ 					<%= label_tag(:address, "Address:") %>
+ 					<%= text_field_tag(:address) %>
+ 					<%= label_tag(:city, "City:") %>
+ 					<%= text_field_tag(:city) %>
+    				<%= label_tag :province %>
+    				<%= select_tag "Province", options_from_collection_for_select(@province, "id", "name") %>
+ 					<%= label_tag(:postal_code, "Postal Code:") %>
+ 					<%= text_field_tag(:postal_code) %>
+ 					<%= label_tag(:email, "Email:") %>
+ 					<%= text_field_tag(:email) %>
+ 					<br/>
+ 					<%= submit_tag("Place Order") %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
